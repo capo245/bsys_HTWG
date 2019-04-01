@@ -1,0 +1,24 @@
+*Frage 1:
+Nach dem Fork besitzen beide Prozesse einen eigenen virtuellen Addressraum und können
+somit nur noch ihre eigenen Variablen verändern und nicht die der Familienprozesse.
+*Frage 2:
+Beide können die Datei öffnen, allerdings verwaltet das Betriebsystem den Dateizugriff,
+so dass beide Prozesse nicht gleichzeitig in die Datei schreiben können.
+*Frage 3
+Dies ist möglich mithilfer einer für beide Prozesse zugängliche Speichervariablen(shared memory location).
+Ein Prozess muss dann aktiv warten, in dem zb mithilfe eines loops der Wert der Variablen überprüft wird.
+Diese muss den Status des auf den zu wartenden Prozesses darstellen.
+*Frage 4
+Die verschiedenen Varianten bestimmen was und wie ein Programm ausgeführt wird.
+execlp(),  execvp() und execvpe() emulieren das Terminal.
+execle() und execvpe() können zusätzlich noch die ausführungsumgebung setzen.
+execv(), execvp(), and execvpe() simplere varianten die nur argumente weitergeben.
+*Frage 5
+Beim Elternprozess wird die PID zurückgegeben.
+Beim Kindprozess wird -1 zurückgegeben.
+*Frage 6
+Um auf einen spezifischen Fork zu warten.
+*Frage 7
+Kind schreibt in Datei und Elternprozess schreibt auf den STD_OUT.
+*Frage 8
+Beide programme können über die PIPE Nachrichten senden.
