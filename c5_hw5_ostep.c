@@ -13,7 +13,7 @@
 #include <sys/wait.h>
 /*---------------------------------------------------------------------------*/
 int
-main(int argc, char*argv[])
+main(void)
 {
 //1
     signed int rc = -1;

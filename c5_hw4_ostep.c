@@ -37,13 +37,14 @@ main(void)
         execl("/bin/ls", "/usr/", NULL);
         execle("/bin/ls", "ls", "/usr/", NULL, NULL);
         execlp("/bin/ls","ls", "/usr/", NULL);
-        execv("/bin/ls", "/usr/");
+//        execv("/bin/ls", "/usr/");
+        execv(args[0], args);
         execvp(args[0], args);   
     }
 //3
     else {
         // parent
-        int rc_wait = wait(NULL);
+        //int rc_wait = wait(NULL);
     }
 /*---------------------------------------------------------------------------*/
     return 0;
